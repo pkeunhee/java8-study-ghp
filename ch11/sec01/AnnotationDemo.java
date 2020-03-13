@@ -43,7 +43,7 @@ public abstract class AnnotationDemo {
     @BugReport(showStopper=true, reportedBy="Joe")
     public void checkMoreRandomInsertions() {}
     
-    @BugReport(showStopper=true, reportedBy="Joe")
+    //@BugReport(showStopper=true, reportedBy="Joe")
     @BugReport(reportedBy={"Harry", "Carl"})
     public void checkEvenMoreRandomInsertions() {}
     

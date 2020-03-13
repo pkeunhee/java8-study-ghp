@@ -16,7 +16,8 @@ public class OptionalDemo {
                 StandardCharsets.UTF_8);
         List<String> wordList = Arrays.asList(contents.split("\\PL+"));
 
-        Optional<String> optionalValue = wordList.stream().filter(s -> s.contains("fred"))
+        Optional<String> optionalValue = wordList.stream()
+                .filter(s -> s.contains("fred"))
                 .findFirst();
         System.out.print(optionalValue.orElse("No word") + " contains fred");
 
@@ -48,7 +49,7 @@ public class OptionalDemo {
         System.out.println(result2);
     }
 
-    public static Optional<Double> inverse(Double x) {
+    public static Optional<Double> inverse(Double x) { // inverse : 역함수
         return x == 0 ? Optional.empty() : Optional.of(1 / x);
     }
 
